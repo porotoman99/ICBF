@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "icbf",
+  "version": "${version}",
+
+  "name": "ICBF",
+  "description": "Invincible Combat Battle Fantasy",
+  "authors": [
+    "invinciblespeed",
+    "porotoman99"
+  ],
+  "contact": {
+    "sources": "https://github.com/porotoman99/ICBF"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/icbf/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "icbf.ICBF"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}

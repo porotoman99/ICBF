@@ -48,6 +48,12 @@ public class ICBF implements ModInitializer {
 			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
 	);
 
+	public static final Item OBLITERITE_INGOT = Registry.register(
+			Registry.ITEM,
+			new Identifier("icbf", "obliterite_ingot"),
+			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).fireproof())
+	);
+
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Loading ICBF...");

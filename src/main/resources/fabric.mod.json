@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "ICBF",
-  "description": "Invincible Combat Battle Fantasy",
+  "description": "I§kNVINCIBLE §rC§kOMBAT §rB§kATTLE §rF§kANTASY",
   "authors": [
     "invinciblespeed",
     "porotoman99"
@@ -13,7 +13,7 @@
     "sources": "https://github.com/porotoman99/ICBF"
   },
 
-  "license": "GPLv3",
+  "license": "MIT",
   "icon": "assets/icbf/icon.png",
 
   "environment": "*",
@@ -25,6 +25,7 @@
 
   "depends": {
     "fabricloader": ">=0.14.10",
+    "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17"
   }

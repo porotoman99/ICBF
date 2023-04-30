@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "item/handheld",
   "textures": {
-    "layer0": "icbf:item/leather_glove"
+    "layer0": "icbf:item/leather_glove",
+    "layer1": "icbf:item/leather_glove_overlay"
   }
 }

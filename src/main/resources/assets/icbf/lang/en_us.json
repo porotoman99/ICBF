@@ -1,5 +1,6 @@
 {
   "item.icbf.rose_gold_ingot": "Rose Gold Ingot",
-  "item.icbf.bell_metal_ingot": "Bell Metal Ingot",
-  "block.icbf.rose_gold_block": "Block of Rose Gold"
+  "item.icbf.bellmetal_ingot": "Bellmetal Ingot",
+  "block.icbf.rose_gold_block": "Block of Rose Gold",
+  "item.icbf.leather_glove": "Leather Glove"
 }

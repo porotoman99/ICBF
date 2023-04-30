@@ -1,14 +1,14 @@
 package icbf;
 
+import icbf.item.custom.GloveItem;
+import icbf.item.custom.LeatherToolMaterial;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -26,7 +26,7 @@ public class ICBF implements ModInitializer {
 
 	public static final Item BELL_METAL_INGOT = Registry.register(
 			Registry.ITEM,
-			new Identifier("icbf", "bell_metal_ingot"),
+			new Identifier("icbf", "bellmetal_ingot"),
 			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
 	);
 
@@ -34,6 +34,12 @@ public class ICBF implements ModInitializer {
 			Registry.BLOCK,
 			new Identifier("icbf", "rose_gold_block"),
 			new Block(FabricBlockSettings.of(Material.METAL, MapColor.GOLD).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.METAL))
+	);
+
+	public static final Item LEATHER_GLOVE = Registry.register(
+			Registry.ITEM,
+			new Identifier("icbf", "leather_glove"),
+			new GloveItem(LeatherToolMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.COMBAT))
 	);
 
 	@Override

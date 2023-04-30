@@ -24,40 +24,10 @@ public class ICBF implements ModInitializer {
 			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
 	);
 
-	public static final Item LOCKALLOY_INGOT = Registry.register(
-			Registry.ITEM,
-			new Identifier("icbf", "lockalloy_ingot"),
-			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
-	);
-
-	public static final Item BRASS_INGOT = Registry.register(
-			Registry.ITEM,
-			new Identifier("icbf", "brass_ingot"),
-			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
-	);
-
-	public static final Item GUNMETAL_INGOT = Registry.register(
-			Registry.ITEM,
-			new Identifier("icbf", "gunmetal_ingot"),
-			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
-	);
-
-	public static final Item MAGNOX_INGOT = Registry.register(
-			Registry.ITEM,
-			new Identifier("icbf", "magnox_ingot"),
-			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
-	);
-
 	public static final Item BELL_METAL_INGOT = Registry.register(
 			Registry.ITEM,
 			new Identifier("icbf", "bell_metal_ingot"),
 			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS))
-	);
-
-	public static final Item OBLITERITE_INGOT = Registry.register(
-			Registry.ITEM,
-			new Identifier("icbf", "obliterite_ingot"),
-			new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).fireproof())
 	);
 
 	public static final Block ROSE_GOLD_BLOCK = Registry.register(

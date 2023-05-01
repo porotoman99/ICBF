@@ -36,4 +36,6 @@ public class LeatherToolMaterial implements ToolMaterial {
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Items.LEATHER);
     }
+
+    //TODO: SoundEvents.ITEM_ARMOR_EQUIP_LEATHER when putting item into offhand
 }

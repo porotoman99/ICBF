@@ -43,7 +43,7 @@ public class ICBF implements ModInitializer {
 	public static final Item LEATHER_GLOVE = Registry.register(
 			Registry.ITEM,
 			new Identifier("icbf", "leather_glove"),
-			(new DyeableGloveItem(LeatherToolMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.COMBAT)))
+			(new DyeableGloveItem(LeatherToolMaterial.INSTANCE, 1, new FabricItemSettings().group(ItemGroup.COMBAT)))
 	);
 
 	@Override

@@ -63,6 +63,12 @@ public class ICBF implements ModInitializer {
 			new GloveItem(IronGloveMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.COMBAT))
 	);
 
+	public static final Item DIAMOND_GLOVE = Registry.register(
+			Registry.ITEM,
+			new Identifier("icbf", "diamond_glove"),
+			new GloveItem(DiamondGloveMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.COMBAT))
+	);
+
 	@Override
 	public void onInitialize() {
 
@@ -89,18 +95,24 @@ public class ICBF implements ModInitializer {
 
 		//Gives gloves armor values when in the offhand
 		ModifyItemAttributeModifiersCallback.EVENT.register(((stack, slot, attributeModifiers) -> {
-			if(stack.isOf(LEATHER_GLOVE) && slot.getEntitySlotId() == EquipmentSlot.OFFHAND.getEntitySlotId()){
+			if(stack.isOf(LEATHER_GLOVE) && slot.getName().equals("offhand")){
 				attributeModifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.fromString("5e48ea94-f441-4d7d-a8c9-fb801450226b"), "Armor modifier", 1, EntityAttributeModifier.Operation.ADDITION));
 			}
 		}));
 		ModifyItemAttributeModifiersCallback.EVENT.register(((stack, slot, attributeModifiers) -> {
-			if(stack.isOf(CHAINMAIL_GLOVE) && slot.getEntitySlotId() == EquipmentSlot.OFFHAND.getEntitySlotId()){
+			if(stack.isOf(CHAINMAIL_GLOVE) && slot.getName().equals("offhand")){
 				attributeModifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.fromString("7de4836d-93e0-4223-ba39-c74a4dc8d986"), "Armor modifier", 2, EntityAttributeModifier.Operation.ADDITION));
 			}
 		}));
 		ModifyItemAttributeModifiersCallback.EVENT.register(((stack, slot, attributeModifiers) -> {
-			if(stack.isOf(IRON_GLOVE) && slot.getEntitySlotId() == EquipmentSlot.OFFHAND.getEntitySlotId()){
+			if(stack.isOf(IRON_GLOVE) && slot.getName().equals("offhand")){
 				attributeModifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.fromString("75d10d51-115e-4fbf-b57e-294296136e55"), "Armor modifier", 3, EntityAttributeModifier.Operation.ADDITION));
+			}
+		}));
+		ModifyItemAttributeModifiersCallback.EVENT.register(((stack, slot, attributeModifiers) -> {
+			if(stack.isOf(DIAMOND_GLOVE) && slot.getName().equals("offhand")){
+				attributeModifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.fromString("fe11c0e8-2f3b-4106-ab59-c8903351e137"), "Armor modifier", 4, EntityAttributeModifier.Operation.ADDITION));
+				attributeModifiers.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.fromString("bcaea7ce-fb3b-4163-9d8c-31c78dabd909"), "Armor toughness", 1.0F, EntityAttributeModifier.Operation.ADDITION));
 			}
 		}));
 

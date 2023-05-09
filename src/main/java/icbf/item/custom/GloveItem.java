@@ -8,7 +8,7 @@ import net.minecraft.item.ToolMaterial;
 
 public class GloveItem extends ToolItem{
 
-    public GloveItem(ToolMaterial material, int defense, Settings settings) {
+    public GloveItem(ToolMaterial material, Settings settings) {
         super(material, settings);
     }
 

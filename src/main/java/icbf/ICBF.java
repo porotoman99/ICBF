@@ -1,7 +1,9 @@
 package icbf;
 
+import icbf.item.custom.ChainmailGloveMaterial;
 import icbf.item.custom.DyeableGloveItem;
-import icbf.item.custom.LeatherToolMaterial;
+import icbf.item.custom.GloveItem;
+import icbf.item.custom.LeatherGloveMaterial;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -43,7 +45,13 @@ public class ICBF implements ModInitializer {
 	public static final Item LEATHER_GLOVE = Registry.register(
 			Registry.ITEM,
 			new Identifier("icbf", "leather_glove"),
-			(new DyeableGloveItem(LeatherToolMaterial.INSTANCE, 1, new FabricItemSettings().group(ItemGroup.COMBAT)))
+			(new DyeableGloveItem(LeatherGloveMaterial.INSTANCE, 1, new FabricItemSettings().group(ItemGroup.COMBAT)))
+	);
+
+	public static final Item CHAINMAIL_GLOVE = Registry.register(
+			Registry.ITEM,
+			new Identifier("icbf", "chainmail_glove"),
+			(new GloveItem(ChainmailGloveMaterial.INSTANCE, 2, new FabricItemSettings().group(ItemGroup.COMBAT)))
 	);
 
 	@Override

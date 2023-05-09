@@ -4,12 +4,12 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class LeatherToolMaterial implements ToolMaterial {
-    public static final LeatherToolMaterial INSTANCE = new LeatherToolMaterial();
+public class ChainmailGloveMaterial implements ToolMaterial {
+    public static final ChainmailGloveMaterial INSTANCE = new ChainmailGloveMaterial();
 
     @Override
     public int getDurability() {
-        return 34;
+        return 103;
     }
 
     @Override
@@ -29,13 +29,13 @@ public class LeatherToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 15;
+        return 12;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.LEATHER);
+        return Ingredient.ofItems(Items.IRON_INGOT);
     }
 
-    //TODO: SoundEvents.ITEM_ARMOR_EQUIP_LEATHER when putting item into offhand
+    //TODO: SoundEvents.ITEM_ARMOR_EQUIP_CHAIN when putting item into offhand
 }
